@@ -1,0 +1,18 @@
+[package]
+name = "chatbot-wa"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.3.1"
+
+# Google Sheets API via gspread-rs (akses via service account)
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12.22", features = ["json", "blocking", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Scheduler untuk cron (opsional)
+dotenv = "0.15.0"
+
+google-sheets4 = "*"
